@@ -3,10 +3,8 @@ import React, { useState, useEffect } from "react";
 //Components
 import Form from "./components/Form";
 
-console.log(import.meta.env);
-
 function App() {
-  const [term, setTerm] = useState({});
+  const [term, setTerm] = useState("");
 
   useEffect(() => {
     const getData = async () => {
