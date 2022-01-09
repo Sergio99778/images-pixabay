@@ -3,7 +3,7 @@ import React, { useState } from "react";
 //Components
 import Error from "./Error";
 
-const Form = () => {
+const Form = ({ setTerm }) => {
   //State
   const [search, setSearch] = useState("");
   const [error, setError] = useState(false);
@@ -17,6 +17,8 @@ const Form = () => {
       return;
     }
     setError(false);
+    //Send term to App
+    setTerm(search);
   };
 
   const handleChange = (e) => {
